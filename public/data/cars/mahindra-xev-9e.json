@@ -1,0 +1,904 @@
+{
+  "id": "mahindra-xev-9e",
+  "make": "Mahindra",
+  "model": "XEV 9e",
+  "years": "2025 onwards",
+  "bodyType": "Coupe SUV",
+  "status": "complete",
+  "variants": ["Pack One", "Pack Two", "Pack Three Select", "Pack Three"],
+  "manual": {
+    "title": "XEV 9e Owner's Manual and Quick Reference Vehicle Manual",
+    "publisher": "Mahindra Electric Automobile Limited",
+    "issued": "Owner's Manual March 2025, Quick Reference Manual February 2025",
+    "url": "https://www.mahindraelectricsuv.com/owner_manual_XEV_9e.html",
+    "note": "Features vary by variant. Check your variant before relying on a feature."
+  },
+  "emergency": {
+    "gatePrompt": "Smoke, a burning smell, fluid under the car, a crash, or visible damage to the underbody or orange cables? Do not troubleshoot. Get everyone out and away.",
+    "title": "After a crash or if something looks wrong",
+    "steps": [
+      "If it is safe, get everyone out and move well away from the car. Airbags can still deploy after the car has stopped.",
+      "Do not touch orange high voltage cables, a damaged battery pack, or any leaking fluid. They may be conductive or toxic.",
+      "Press SOS on the roof console or the SOS icon on the screen. It calls 108 and texts your emergency contacts with the car's location.",
+      "Tell responders and roadside assistance that this is an electric vehicle.",
+      "Do not charge the car until a Mahindra technician has inspected it. Move it only on a flatbed."
+    ],
+    "contacts": [
+      { "name": "SOS", "detail": "Roof console button or screen icon, calls 108" },
+      { "name": "RSA", "detail": "Screen icon or Me4U app, calls roadside assistance" },
+      { "name": "Ask Mahindra", "detail": "Screen icon, calls Mahindra support" }
+    ],
+    "footnote": "Use a class ABC fire extinguisher only. The car cannot be push started or tow started."
+  },
+  "categories": [
+    { "id": "power", "name": "Won't start or move" },
+    { "id": "charge", "name": "Charging" },
+    { "id": "keys", "name": "Keys, locks and alarm" },
+    { "id": "body", "name": "Doors, tailgate, windows" },
+    { "id": "drive", "name": "Driving, brakes, noises" },
+    { "id": "lights", "name": "Lights" },
+    { "id": "warn", "name": "Warnings and messages" },
+    { "id": "cabin", "name": "Cabin, climate, tech" },
+    { "id": "road", "name": "Tyres, towing, road" }
+  ],
+  "issues": [
+    {
+      "id": "no-power", "cat": "power", "sev": "diy",
+      "title": "Pressing Start/Stop does nothing",
+      "keys": "won't start not starting dead no power start stop button key not detected ignition",
+      "summary": "The car only powers up when a valid smart key is detected inside the cabin.",
+      "steps": [
+        { "d": "Take the key fob out of the glove box or top bin and hold it in the open cabin or your pocket.", "w": "The manual notes the fob may not be detected in the glove box or top bin." },
+        { "d": "Move your phone, laptop or tablet away from the fob and try again.", "w": "These devices can block the fob signal when kept in the same pocket or bag." },
+        { "d": "Make sure no other car's fob is being used right next to you, and move away from radio towers or airport transmitters.", "w": "Strong radio interference can stop the fob being received." },
+        { "d": "Try your second key.", "w": "If the second key works, the first key's CR2032 battery is the likely cause." },
+        { "d": "Replace the fob battery with a 3 V CR2032, positive side facing up.", "w": "Inconsistent button response is the manual's sign of a weak fob battery." },
+        { "d": "Check the state of charge. If the high voltage battery reached 0%, the car cannot be driven until it is recharged.", "w": "A deep discharge can also drain the 12 V battery." }
+      ],
+      "esc": "If the immobiliser lamp flashes or stays on after switching on, or nothing works with either key, contact a Mahindra authorised service centre.",
+      "ref": "Owner's Manual 3.1, 3.2, 3.3.3, 1.3"
+    },
+    {
+      "id": "no-drive", "cat": "power", "sev": "diy",
+      "title": "Car switches on but won't drive",
+      "keys": "won't move drive not enabled stuck in park gear won't engage shift",
+      "summary": "Drive stays disabled in a few specific situations.",
+      "steps": [
+        { "d": "Check the charge port. If a charging gun is still plugged in, unplug it.", "w": "Drive enable is blocked while the charge gun is connected." },
+        { "d": "Press and hold the brake pedal, then move the shift lever to D or R.", "w": "Gear changes need the brake pressed." },
+        { "d": "Look at the gear indicator on the lever and the driver display to confirm the selected gear.", "w": "" },
+        { "d": "Check the state of charge on the driver display.", "w": "At 0% the car will not drive." },
+        { "d": "Look for any gear shift alert on the driver display and follow it.", "w": "" }
+      ],
+      "esc": "If the gun will not release, use the Charging gun stuck guide. If drive still won't enable, call Ask Mahindra or RSA.",
+      "ref": "Owner's Manual 1.4, 7 (Shift by Wire Lever)"
+    },
+    {
+      "id": "shutdown", "cat": "power", "sev": "stop",
+      "title": "Car shut down while driving",
+      "keys": "shut down died stopped power loss turned off while driving breakdown",
+      "summary": "Treat a shutdown as a safety event.",
+      "warn": "Do not try to push start or tow start the car. It can damage the motor and powertrain.",
+      "steps": [
+        { "d": "Switch on the hazard lamps and steer to a safe place if you still can.", "w": "" },
+        { "d": "If you are on a railway crossing or in an intersection, get help and move the car to safety quickly.", "w": "" },
+        { "d": "Note the state of charge and any warning messages on the driver display.", "w": "This helps the service team diagnose the fault." },
+        { "d": "Call RSA from the screen or the Me4U app. Ask for a flatbed.", "w": "Only flatbed towing is allowed." }
+      ],
+      "esc": "Contact a Mahindra authorised dealership. Do not attempt repairs on the high voltage system.",
+      "ref": "Owner's Manual 1.3, 1.4, 1.10, 14 (Towing)"
+    },
+    {
+      "id": "range", "cat": "power", "sev": "normal",
+      "title": "Range is lower than expected",
+      "keys": "range drop low range battery drains fast consumption efficiency soc",
+      "summary": "Range depends on temperature, driving style and battery age.",
+      "steps": [
+        { "d": "Consider the weather. Between minus 10 C and 0 C, performance drops and charging takes much longer.", "w": "" },
+        { "d": "Drive at a steady speed with moderate acceleration, especially at low charge.", "w": "Frequent hard acceleration and braking uses more energy." },
+        { "d": "Switch to Range mode from the drive mode button on the Intelli Command Center.", "w": "Range mode is tuned for maximum range. The car restarts in Default mode every time." },
+        { "d": "Raise regeneration with the left paddle (Regen +) or turn on One Pedal Drive to recover more energy when slowing.", "w": "" },
+        { "d": "Remember the car's battery discharges slowly whenever the ignition is on.", "w": "" }
+      ],
+      "esc": "Some capacity loss over years is normal. If the drop is sudden or large, have the battery checked by a Mahindra authorised dealer.",
+      "ref": "Owner's Manual 1.3, 7 (Extending Your Driving Range, Drive Modes)"
+    },
+    {
+      "id": "no-charge", "cat": "charge", "sev": "diy",
+      "title": "Charging won't start",
+      "keys": "won't charge not charging charger not working ac charging plug evse",
+      "summary": "Work from the charge port light, then the power source.",
+      "steps": [
+        { "d": "Read the colour of the charge port light. Use the Decode tab if you are unsure.", "w": "White blinking means the system is still verifying. Give it a moment." },
+        { "d": "If the light blinks blue, charging is scheduled. Change or cancel the schedule on the screen or in Me4U.", "w": "" },
+        { "d": "For the 3 kW portable charger, use a 230 V, 16 A single phase socket with proper earthing, a circuit breaker and surge protection.", "w": "Never use a 5 A socket or an extension cord from one." },
+        { "d": "Inspect the cable, plug and socket for wear or damage. Do not use damaged or uncertified equipment.", "w": "" },
+        { "d": "At a public station, try a different charger or connector.", "w": "Me4U sends an alert when the external charger is faulty." },
+        { "d": "Make sure the charging lid and gun are fully seated, then reconnect.", "w": "" }
+      ],
+      "esc": "If the port light blinks red (charge error) on more than one charger, contact a Mahindra authorised service centre.",
+      "ref": "Quick Reference Manual 11, 11.4; Owner's Manual 13"
+    },
+    {
+      "id": "slow-charge", "cat": "charge", "sev": "normal",
+      "title": "Charging is slower than expected",
+      "keys": "slow charging taking long charge time fast charging dc 20 80",
+      "summary": "Charge speed depends on charger rating, temperature and state of charge.",
+      "steps": [
+        { "d": "Check which charger you are on. The portable unit is 3 kW; wall boxes are 7.2 kW or 11 kW.", "w": "The on-board charger accepts up to 11 kW AC." },
+        { "d": "For fast charging, note that 20% to 80% in about 20 minutes needs a 175 kW DC charger and ideal conditions.", "w": "Lower-rated DC or AC chargers take longer." },
+        { "d": "Consider temperature. Charging slows considerably between minus 10 C and 0 C.", "w": "" },
+        { "d": "Remember that charge time varies with battery state of charge, battery temperature and supply fluctuations.", "w": "" }
+      ],
+      "esc": "If charging is slow on a known-good charger in mild weather every time, have it checked.",
+      "ref": "Quick Reference Manual 11.5 to 11.7; Owner's Manual 13"
+    },
+    {
+      "id": "gun-stuck", "cat": "charge", "sev": "diy",
+      "title": "Charging gun won't come out",
+      "keys": "gun stuck plug stuck connector locked can't unplug amber",
+      "summary": "An amber blinking port light means the gun is stuck. There is a disconnect switch and a manual release.",
+      "warn": "Never touch the metal connector pins. Do not force the gun out.",
+      "steps": [
+        { "d": "Confirm charging has stopped.", "w": "" },
+        { "d": "Press the Charge Port Disconnect switch on the driver side switch bank, below the right-hand air vents.", "w": "" },
+        { "d": "Open the boot and find the trim cover on the left-hand quarter trim. Remove the safety cover.", "w": "" },
+        { "d": "Pull the black-handled release cable gently.", "w": "Pulling hard can damage the locking mechanism." },
+        { "d": "Remove the plug gently, then close the charging lid.", "w": "" }
+      ],
+      "esc": "If the gun still won't release, call RSA. Do not drive; the car won't move with the gun connected anyway.",
+      "ref": "Quick Reference Manual 3.9.4, 11.8"
+    },
+    {
+      "id": "lid", "cat": "charge", "sev": "diy",
+      "title": "Charging lid won't open",
+      "keys": "charge lid flap door won't open charge port cover",
+      "summary": "The lid opens only when the car is unlocked.",
+      "steps": [
+        { "d": "Unlock the car with the key fob, Me4U, or the central lock switch.", "w": "" },
+        { "d": "Press the marked dot on the lid gently. Do not press elsewhere on the lid.", "w": "" },
+        { "d": "If the actuator has failed, open the boot, remove the safety cover on the left-hand rear trim, and pull the release cable gently.", "w": "" },
+        { "d": "Press the marked dot again to open the lid.", "w": "Do not force the lid open." }
+      ],
+      "esc": "If the manual release does not work, visit a Mahindra authorised service centre.",
+      "ref": "Owner's Manual 3.8, 3.8.1"
+    },
+    {
+      "id": "charge-noise", "cat": "charge", "sev": "normal",
+      "title": "Noises while charging",
+      "keys": "noise sound fan humming clicking while charging",
+      "summary": "Fans, the compressor, contactors and relays make noise during charging. This is expected.",
+      "steps": [
+        { "d": "Listen for a steady fan or compressor sound, or a single click at start and finish.", "w": "These are normal." },
+        { "d": "Keep the car in a well-ventilated area away from flammable materials while charging.", "w": "" }
+      ],
+      "esc": "A burning smell, smoke, or crackling is not normal. Stop charging if safe and use the emergency steps.",
+      "ref": "Owner's Manual 1.3"
+    },
+    {
+      "id": "lever-light", "cat": "charge", "sev": "normal",
+      "title": "Gear knob light stays on while charging",
+      "keys": "gear knob light lever light shift lever illuminated p light stays on while charging backlight",
+      "summary": "Most likely the car staying awake to charge, not a fault. The manual does not describe this behaviour, so confirm it with the sleep test below.",
+      "inferred": true,
+      "note": "Not documented in the manual. The steps below are inferred from what the manual does say: the selected gear is illuminated on the shift lever, the 12 V battery charges whenever the car is charging, and drive stays disabled while the gun is plugged in.",
+      "steps": [
+        { "d": "Check which gear is lit. It should be P only.", "w": "The car holds P while charging because drive cannot be enabled with the gun connected." },
+        { "d": "Confirm the light is steady, not flickering.", "w": "A steady backlight fits a car that is simply awake. Flickering does not." },
+        { "d": "Unplug the charger, lock the car, and leave it for 10 to 15 minutes. Then look again.", "w": "This is the real test. The car should go to sleep once it is not charging." },
+        { "d": "If the light is off after that wait, nothing is wrong. The light was only showing the car was awake to charge.", "w": "" },
+        { "d": "If the light is still on after the car has been locked and idle, note the time and treat it as a fault.", "w": "A light that never goes out will slowly drain the 12 V battery." },
+        { "d": "Over the next few days, watch Me4U for a 12 V battery drain alert.", "w": "That alert is the manual's own signal that the low voltage battery is discharging continuously." }
+      ],
+      "esc": "If the light stays on with the car locked and idle, or a 12 V drain alert appears, report both to a Mahindra authorised service centre.",
+      "ref": "Inferred from Owner's Manual 1.4, 7 (Shift by Wire Lever); Quick Reference Manual 1.13.1, 11.1"
+    },
+    {
+      "id": "low-soc", "cat": "charge", "sev": "service",
+      "title": "Battery at or near 0%",
+      "keys": "empty battery zero percent 0% flat battery low charge alert red light",
+      "summary": "A steady red port light means charge is below 10%. Running to 0% can damage components.",
+      "warn": "Discharge-related damage and towing costs are not covered by warranty.",
+      "steps": [
+        { "d": "Charge as soon as possible. Me4U sends a low charge alert when charge is low.", "w": "" },
+        { "d": "If the car will not move at 0%, call RSA for a flatbed to a charger. Do not tow on its wheels.", "w": "" },
+        { "d": "After a full discharge, watch for a 12 V battery drain alert in Me4U.", "w": "The manual lists the 12 V battery as a component that can be damaged." }
+      ],
+      "esc": "If the car was fully discharged, have it inspected by a Mahindra authorised dealer.",
+      "ref": "Owner's Manual 1.3; Quick Reference Manual 1.13.1"
+    },
+    {
+      "id": "fob-range", "cat": "keys", "sev": "diy",
+      "title": "Key fob works only up close, or not at all",
+      "keys": "fob not working remote range key battery weak remote",
+      "summary": "Normal remote range is about 20 m. Distance, obstacles, interference and battery affect it.",
+      "steps": [
+        { "d": "Stand closer, especially in rain or bad weather.", "w": "" },
+        { "d": "Step left or right and hold the fob higher.", "w": "Other vehicles or objects may be blocking the signal." },
+        { "d": "Move away from radio towers, airport transmitters, or CB radios.", "w": "" },
+        { "d": "Replace the CR2032 3 V battery. Open the cover with a small flat screwdriver, rotate the secure cover anti-clockwise, fit the new cell positive side up.", "w": "Keep button cells away from children." },
+        { "d": "Use the mechanical key blade in the driver door to get in if needed.", "w": "The key blade sits inside the battery cover." }
+      ],
+      "esc": "If a new battery doesn't help, contact a Mahindra authorised dealer.",
+      "ref": "Owner's Manual 3.1.13, 3.1.15, 3.3.4"
+    },
+    {
+      "id": "wont-lock", "cat": "keys", "sev": "diy",
+      "title": "Car won't lock, chimes and flashes 5 times",
+      "keys": "won't lock flashes five times chime door handle lock not locking",
+      "summary": "Five flashes with a chime means something is preventing the lock.",
+      "steps": [
+        { "d": "Check that no key fob is left inside the car.", "w": "" },
+        { "d": "Check every door, the bonnet and the tailgate are fully closed.", "w": "" },
+        { "d": "Check the driver display for a steering lock alert.", "w": "" },
+        { "d": "If the ignition is still on, switch it off. A remote lock with the ignition on keeps the car unlocked.", "w": "" },
+        { "d": "Hold the fob within 0.7 m of the driver door handle and push the handle to lock.", "w": "" }
+      ],
+      "esc": "If all doors are shut and the car still won't lock, lock with the key blade and book service.",
+      "ref": "Owner's Manual 3.1, 3.1.3"
+    },
+    {
+      "id": "alarm", "cat": "keys", "sev": "diy",
+      "title": "Alarm is going off",
+      "keys": "alarm siren horn going off theft burglar",
+      "summary": "The theft alarm sounds for 27 seconds when doors or ignition are tampered with while armed.",
+      "steps": [
+        { "d": "Press UNLOCK on the key fob, or switch the ignition on with a valid key.", "w": "" },
+        { "d": "If you opened the driver door with the key blade while the car was armed, that is what triggered it.", "w": "Use the fob unlock button to stop it." },
+        { "d": "If the hazards flashed 4 times with an alarm when you unlocked, someone attempted entry while it was armed. Check the car.", "w": "" }
+      ],
+      "esc": "If the alarm triggers with no cause repeatedly, have the system checked.",
+      "ref": "Owner's Manual 3.1.4, 3.1.12, 3.2"
+    },
+    {
+      "id": "only-driver", "cat": "keys", "sev": "normal",
+      "title": "Only the driver door unlocks",
+      "keys": "only driver door unlocks passenger door locked",
+      "summary": "Driver-door-only unlock is a setting.",
+      "steps": [
+        { "d": "Press UNLOCK on the fob a second time to unlock all doors.", "w": "" },
+        { "d": "To change this, turn off driver door unlock in the screen settings.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.1.4"
+    },
+    {
+      "id": "auto-relock", "cat": "keys", "sev": "normal",
+      "title": "Car locked itself again",
+      "keys": "relocked locked itself auto lock auto relock",
+      "summary": "The car relocks if no door is opened within 45 seconds of unlocking. It also locks above 20 km/h.",
+      "steps": [
+        { "d": "Open a door within 45 seconds after unlocking.", "w": "" },
+        { "d": "Expect all doors to lock once you pass 20 km/h with doors closed, and unlock when the ignition is switched off.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.1.10"
+    },
+    {
+      "id": "wal-sau", "cat": "keys", "sev": "diy",
+      "title": "Walk-away lock or approach unlock not working",
+      "keys": "walk away lock approach unlock sau wal proximity",
+      "summary": "These convenience features have conditions and can switch themselves off.",
+      "steps": [
+        { "d": "Check both features are enabled: App Drawer, Settings, My Vehicle, Exterior, Lock.", "w": "" },
+        { "d": "Make sure no fob is left inside the car.", "w": "" },
+        { "d": "Walk away beyond 3 to 4 m after locking. A fob kept inside that zone can stop locking or cause unlocking.", "w": "The fob stops searching after 3 minutes nearby, which disables these features." },
+        { "d": "If the car sat locked for more than a week, approach unlock is disabled. Unlock normally once.", "w": "" },
+        { "d": "Close all doors, the bonnet and tailgate before walking away.", "w": "" }
+      ],
+      "esc": "These features may not work in all conditions. Lock with the fob or door handle instead.",
+      "ref": "Owner's Manual 3.1.8"
+    },
+    {
+      "id": "lost-key", "cat": "keys", "sev": "service",
+      "title": "Lost or stolen key",
+      "keys": "lost key stolen key duplicate key new key",
+      "summary": "Deactivate the lost key quickly to prevent misuse.",
+      "steps": [
+        { "d": "Report the loss to a Mahindra authorised service centre straight away so they deactivate the key.", "w": "" },
+        { "d": "Take the car and all remaining keys to the service centre for programming.", "w": "A maximum of 2 keys can be registered." },
+        { "d": "Allow at least 10 days for a duplicate after formalities are done.", "w": "Self-made duplicates will not start the car." }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.1.14"
+    },
+    {
+      "id": "rear-door", "cat": "body", "sev": "normal",
+      "title": "Rear door won't open from inside",
+      "keys": "rear door won't open inside child lock back door",
+      "summary": "The child safety lock is probably engaged.",
+      "steps": [
+        { "d": "Open the door from outside.", "w": "" },
+        { "d": "On the door edge, pull the child lock lever up until it clicks to disengage it.", "w": "" },
+        { "d": "Also check the door lock tab is lifted to unlock.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.3, 3.3.2"
+    },
+    {
+      "id": "handle", "cat": "body", "sev": "normal",
+      "title": "Front door handle won't pop out",
+      "keys": "door handle flush handle not popping out",
+      "summary": "Handles present only when unlocked and retract when locked or above 7 km/h.",
+      "steps": [
+        { "d": "Unlock the car with the fob. Electric handles pop out on their own.", "w": "" },
+        { "d": "On manual handles, push the handle once to make it pop out.", "w": "" },
+        { "d": "If the fob is dead, push the handle slightly, then pull it firmly to reach the key barrel and use the key blade.", "w": "Turn clockwise to unlock." }
+      ],
+      "esc": "If a handle never presents when unlocked, book service.",
+      "ref": "Owner's Manual 3.3"
+    },
+    {
+      "id": "tailgate", "cat": "body", "sev": "diy",
+      "title": "Power tailgate stops or won't operate",
+      "keys": "tailgate boot trunk won't open power tailgate stops kick sensor",
+      "summary": "The tailgate protects its motor, detects obstacles, and needs the fob nearby in some modes.",
+      "steps": [
+        { "d": "If you opened and closed it 6 to 7 times in a row, wait at least 1 minute.", "w": "It stops to prevent the motor overheating." },
+        { "d": "Clear anything in its path. It stops or reverses when it meets resistance.", "w": "" },
+        { "d": "Make sure the car is below 5 km/h.", "w": "" },
+        { "d": "When the car is locked, the exterior switch and kick sensor only work with the fob within about 1 m.", "w": "" },
+        { "d": "For the kick sensor, check it is enabled: App Drawer, Vehicle Apps, My Vehicle, Exterior, Power Tailgate, Hands Free.", "w": "" },
+        { "d": "Try the driver side switch bank: short press opens, long press closes.", "w": "" }
+      ],
+      "esc": "Avoid moving it by hand, especially with the ignition off. If it still fails, visit a Mahindra dealer.",
+      "ref": "Owner's Manual 3.1.9"
+    },
+    {
+      "id": "tailgate-height", "cat": "body", "sev": "diy",
+      "title": "Tailgate opens too high or too low",
+      "keys": "tailgate height opening height garage roof",
+      "summary": "Opening height is adjustable.",
+      "steps": [
+        { "d": "Pick a preset in the screen: L1 opens to 60%, L2 to 80%, L3 to 93%.", "w": "" },
+        { "d": "For a custom height, choose Custom, open the tailgate, stop it at the height you want with the close button.", "w": "Custom range is 30% to 93%." },
+        { "d": "Hold the close button for 5 seconds until you hear 3 beeps, then press close again.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.1.9"
+    },
+    {
+      "id": "trapped", "cat": "body", "sev": "stop",
+      "title": "Someone is locked in the boot",
+      "keys": "trapped in boot locked in trunk emergency release",
+      "summary": "There is an emergency release lever inside the tailgate.",
+      "steps": [
+        { "d": "Open the small cover at the bottom of the tailgate trim.", "w": "" },
+        { "d": "Push the release lever to the right and push the tailgate open.", "w": "" }
+      ],
+      "esc": "No one should ride in the luggage area. It is dangerous in a crash.",
+      "ref": "Owner's Manual 3.1.7"
+    },
+    {
+      "id": "window", "cat": "body", "sev": "diy",
+      "title": "Power window stopped working",
+      "keys": "window not working power window stuck won't go up",
+      "summary": "Windows pause after heavy use, and rear windows can be locked out.",
+      "steps": [
+        { "d": "Make sure the ignition is on. Windows keep working for 3 minutes after switching off.", "w": "" },
+        { "d": "If you used the switch repeatedly, wait 1 to 2 minutes without pressing it.", "w": "Thermal protection pauses upward movement for about 30 seconds." },
+        { "d": "For rear windows, press the window lock switch on the driver door to release it.", "w": "" },
+        { "d": "Operate one window at a time.", "w": "" }
+      ],
+      "esc": "If a window still won't move after waiting, book service.",
+      "ref": "Owner's Manual 3.4.1, 3.4.2, 3.4.4"
+    },
+    {
+      "id": "window-reverse", "cat": "body", "sev": "normal",
+      "title": "Driver window goes back down while closing",
+      "keys": "window reverses goes down anti pinch",
+      "summary": "Anti-pinch reverses the glass during auto-up when it senses an obstruction over 100 N.",
+      "steps": [
+        { "d": "Remove anything in the window path and try auto-up again.", "w": "Never test anti-pinch with your hand." },
+        { "d": "Hold the switch up to close manually if it keeps reversing.", "w": "" }
+      ],
+      "esc": "If it reverses with nothing in the way, book service.",
+      "ref": "Owner's Manual 3.4.4"
+    },
+    {
+      "id": "seat-memory", "cat": "body", "sev": "diy",
+      "title": "Seat memory won't save or recall",
+      "keys": "seat memory position not saving mirror memory",
+      "summary": "Saving has a 3-second window.",
+      "steps": [
+        { "d": "Switch the ignition on and set the seat and mirrors.", "w": "" },
+        { "d": "Press M, then press 1, 2 or 3 within 3 seconds. Wait for the chime.", "w": "Touching the mirror switch during setup cancels it." },
+        { "d": "To recall with the ignition on, press and hold the memory button.", "w": "Mirrors recall only with the ignition on." },
+        { "d": "While driving, seat movement runs for only 3 seconds per press.", "w": "" },
+        { "d": "If saving works but recall lands in the wrong place, run the seat calibration check instead.", "w": "" }
+      ],
+      "esc": "If recall is consistently off, see the check for calibrating the driver seat.",
+      "ref": "Owner's Manual 3.9"
+    },
+    {
+      "id": "seat-calibration", "cat": "body", "sev": "diy",
+      "title": "Driver seat recalls to the wrong position, calibrate it",
+      "keys": "seat calibration calibrate recalibrate seat memory wrong position drifted reset relearn position sensor",
+      "summary": "There is a calibration routine that re-teaches the seat its travel. Run it, then save your position again.",
+      "inferred": true,
+      "note": "Owner reported, not in the manual text this site holds. The manual documents saving and recalling memory positions but no calibration routine. The steps below came from an XEV 9e owner who used them successfully.",
+      "warn": "The seat moves on its own through its full travel during calibration. Keep hands, children and anything on the floor clear of it, and do not sit in it while it runs.",
+      "steps": [
+        { "d": "Before calibrating, re-save the position once, counting the 3 seconds after pressing M deliberately.", "w": "Missing that window is the commonest cause of memory not working, and it needs no calibration." },
+        { "d": "Check it is not the normal easy access behaviour. The manual says the seat moves to half its remaining rearward travel and the final position varies slightly with occupant weight and power supply state.", "w": "That variation is documented as normal, not a fault." },
+        { "d": "Leave the car fully switched on, then get out.", "w": "The routine runs with the ignition on and you outside the car." },
+        { "d": "Press and hold M, and then, while still holding it, also hold the seat back slider. That order matters.", "w": "" },
+        { "d": "Release both. Calibration begins and the seat runs through its travel.", "w": "Let it finish without pressing anything." },
+        { "d": "Get back in, set the seat where you want it, and save it to a memory button again.", "w": "Calibration clears the learned reference, so the old saved position needs re-saving." }
+      ],
+      "esc": "If recall is still wrong after calibrating and re-saving, or the seat does not move during calibration, have it checked by a Mahindra authorised service centre. A position sensor or the memory module would be the next suspects.",
+      "ref": "Owner reported. Memory save and recall behaviour from Owner's Manual 3.9."
+    },
+    {
+      "id": "hood", "cat": "body", "sev": "diy",
+      "title": "Bonnet won't latch or shows open",
+      "keys": "hood bonnet open warning won't close frunk",
+      "summary": "Both latches must engage.",
+      "steps": [
+        { "d": "Lower the bonnet to about 50 cm and close it firmly with both hands.", "w": "" },
+        { "d": "If one side isn't latched, press only on the marked green area of that side.", "w": "Pressing elsewhere can dent the bonnet." },
+        { "d": "Check the bonnet is flush with the bumper and fenders and the driver display no longer shows it open.", "w": "" }
+      ],
+      "esc": "Do not drive with an unlatched bonnet. Book service if it won't latch.",
+      "ref": "Owner's Manual 3.5, 3.6"
+    },
+    {
+      "id": "one-pedal", "cat": "drive", "sev": "normal",
+      "title": "Car stops by itself when I lift off the accelerator",
+      "keys": "stops when lift off one pedal strong regen deceleration",
+      "summary": "One Pedal Drive is active.",
+      "steps": [
+        { "d": "Press the One Pedal button on the steering wheel to turn it off.", "w": "" },
+        { "d": "Or lower regeneration with the right paddle (Regen minus). Levels run 0 to 3.", "w": "" },
+        { "d": "On steep hills, press the brake when stopped even in One Pedal mode.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 6.3, 6.4.4"
+    },
+    {
+      "id": "abs-pulse", "cat": "drive", "sev": "normal",
+      "title": "Brake pedal pulses and there is a motor noise",
+      "keys": "brake pedal vibrates pulsing abs noise braking",
+      "summary": "ABS is working. It activates above 12 km/h when wheels start to lock.",
+      "steps": [
+        { "d": "Keep firm, steady pressure on the pedal. Do not pump it.", "w": "" },
+        { "d": "Expect this on wet manhole covers, steel plates and bridge joints.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 6.4.3"
+    },
+    {
+      "id": "wet-brakes", "cat": "drive", "sev": "diy",
+      "title": "Brakes feel weak after a wash or water",
+      "keys": "weak brakes wet brakes after wash water",
+      "summary": "Wet discs brake less effectively.",
+      "steps": [
+        { "d": "While driving slowly, apply and release the brake gently a few times to dry the discs.", "w": "" }
+      ],
+      "esc": "If braking stays weak, stop driving and call RSA.",
+      "ref": "Quick Reference Manual 6.4"
+    },
+    {
+      "id": "noises", "cat": "drive", "sev": "normal",
+      "title": "Clicks, whine or hum from the car",
+      "keys": "noise tak click whine hum motor sound compressor",
+      "summary": "Several EV sounds are expected.",
+      "steps": [
+        { "d": "A 'tak' when switching on or off is the high voltage contactor.", "w": "" },
+        { "d": "A light motor whine, louder while slowing, is the traction motor.", "w": "" },
+        { "d": "A hum while the AC runs is the compressor.", "w": "" },
+        { "d": "Tyre and wind noise is more noticeable because the motor is quiet.", "w": "" }
+      ],
+      "esc": "Grinding, knocking or a burning smell is not normal. Book service, or stop if it is severe.",
+      "ref": "Owner's Manual 1.3"
+    },
+    {
+      "id": "vibration", "cat": "drive", "sev": "normal",
+      "title": "Vibration after the car was parked a long time",
+      "keys": "vibration shake wobble after long parking flat spot",
+      "summary": "Tyres can take a set when parked for long.",
+      "steps": [
+        { "d": "Drive 5 to 15 km. The disturbance should clear.", "w": "" },
+        { "d": "Check tyre pressures: 36 psi front and rear.", "w": "" }
+      ],
+      "esc": "If it persists, have the car checked by a Mahindra authorised dealer immediately.",
+      "ref": "Owner's Manual 1.7"
+    },
+    {
+      "id": "drive-mode", "cat": "drive", "sev": "normal",
+      "title": "Drive mode resets every time",
+      "keys": "drive mode resets default mode race range everyday boost",
+      "summary": "The car always starts in Default mode.",
+      "steps": [
+        { "d": "Select a mode again with the drive mode button on the Intelli Command Center.", "w": "" },
+        { "d": "Boost gives extra power for 10 seconds only and cannot stay on.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 6.5"
+    },
+    {
+      "id": "adas", "cat": "drive", "sev": "diy",
+      "title": "ADAS, cruise or lane assist not working well",
+      "keys": "adas acc adaptive cruise lane keep not working collision warning sensor",
+      "summary": "Driver assistance depends on clean sensors and clear conditions.",
+      "steps": [
+        { "d": "Clean the windshield in front of the camera, and the bumper sensors.", "w": "" },
+        { "d": "Expect reduced function in heavy rain, fog, poor light, and on steep hills.", "w": "" },
+        { "d": "Lane features need visible road markings.", "w": "" },
+        { "d": "Check features are enabled: Menu, Vehicle Apps, Drive Assist.", "w": "" }
+      ],
+      "esc": "After any impact to the front or corners, have the radars checked by a Mahindra authorised service centre. Always stay in control.",
+      "ref": "Quick Reference Manual 7"
+    },
+    {
+      "id": "parking-cams", "cat": "drive", "sev": "diy",
+      "title": "Parking sensors beep falsely or camera is unclear",
+      "keys": "parking sensor false alarm camera blurry 360 rear view",
+      "summary": "Dirt and weather affect sensors and cameras.",
+      "steps": [
+        { "d": "Clean the camera lenses and bumper sensors.", "w": "" },
+        { "d": "Expect false alarms in heavy rain or strong wind.", "w": "" },
+        { "d": "Remember very close objects may not be detected. Check mirrors and look around.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 9"
+    },
+    {
+      "id": "visionx", "cat": "drive", "sev": "diy",
+      "title": "VisionX head-up display hard to read",
+      "keys": "visionx hud head up display unclear",
+      "summary": "Visibility depends on seat position, glass and eyewear.",
+      "steps": [
+        { "d": "Adjust your seat, then VisionX position and brightness: App Drawer, Vehicle Apps, VisionX.", "w": "" },
+        { "d": "Clean the windshield inside and out and the display's protective glass.", "w": "" },
+        { "d": "Try without polarised sunglasses.", "w": "" }
+      ],
+      "esc": "If it is still unclear, have it checked at a Mahindra authorised service centre.",
+      "ref": "Quick Reference Manual 8"
+    },
+    {
+      "id": "vess", "cat": "drive", "sev": "diy",
+      "title": "Pedestrians don't hear the car",
+      "keys": "silent pedestrian sound vess engine sound",
+      "summary": "Turn on the virtual engine sound.",
+      "steps": [
+        { "d": "Go to App Drawer, Settings, Audio, Sonicsuite, Interior or Exterior, Sound ON.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 6.6"
+    },
+    {
+      "id": "fast-blink", "cat": "lights", "sev": "diy",
+      "title": "Turn signal flashes faster than normal",
+      "keys": "indicator blinking fast turn signal hyperflash",
+      "summary": "One of the turn signal lamps has probably failed.",
+      "steps": [
+        { "d": "Switch on the hazards and walk around the car to find the lamp that isn't working.", "w": "" }
+      ],
+      "esc": "Have the failed lamp replaced promptly.",
+      "ref": "Owner's Manual 3.10.2"
+    },
+    {
+      "id": "fog-headlamp", "cat": "lights", "sev": "normal",
+      "title": "Moisture inside a headlamp",
+      "keys": "fog inside headlamp condensation moisture",
+      "summary": "Headlamps are vented, so light condensation can form.",
+      "steps": [
+        { "d": "Switch the headlamps on for a few minutes. The moisture should clear.", "w": "" }
+      ],
+      "esc": "Standing water or moisture that never clears should be checked.",
+      "ref": "Owner's Manual 3.10.2"
+    },
+    {
+      "id": "auto-lamp", "cat": "lights", "sev": "diy",
+      "title": "Auto headlamps switch at odd times",
+      "keys": "auto headlamp early late sensor rls",
+      "summary": "A light sensor decides, and it can differ from what you see.",
+      "steps": [
+        { "d": "Use manual headlamp mode in fog, rain, snow, or heavy cloud.", "w": "" },
+        { "d": "Clean the sensor area on the windshield without detergent or wax.", "w": "" },
+        { "d": "Aftermarket sun film or spray can cause malfunction.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.10.2"
+    },
+    {
+      "id": "fog-lamp", "cat": "lights", "sev": "diy",
+      "title": "Fog lamps won't switch on",
+      "keys": "fog lamp not working",
+      "summary": "Fog lamps need the parking lamps on.",
+      "steps": [
+        { "d": "Turn on the parking lamps or Auto lamps first.", "w": "" },
+        { "d": "Rotate the inner ring of the lighting stalk to the fog lamp symbol.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.10.6"
+    },
+    {
+      "id": "auto-hazard", "cat": "lights", "sev": "normal",
+      "title": "Hazard lamps came on by themselves",
+      "keys": "hazard lights on by themselves automatic hazard",
+      "summary": "Hazards switch on automatically in three cases.",
+      "steps": [
+        { "d": "Bonnet opened while stationary.", "w": "" },
+        { "d": "Hard braking: hazards run for 10 seconds.", "w": "" },
+        { "d": "Airbag deployment: hazards run for 30 minutes, or until you press the hazard switch or cycle the ignition.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.10.9"
+    },
+    {
+      "id": "beam-aim", "cat": "lights", "sev": "diy",
+      "title": "Headlamps aim too high when loaded",
+      "keys": "headlamp levelling aim high dazzling loaded",
+      "summary": "Use the levelling switch on the driver side switch bank. It works only with low beam on.",
+      "steps": [
+        { "d": "Position 0: driver, or driver and front passenger.", "w": "" },
+        { "d": "Position 1: front seats plus second row occupied.", "w": "" },
+        { "d": "Position 2: all seats occupied.", "w": "" },
+        { "d": "Position 3: all seats and luggage, or driver with heavy luggage at the back.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.10.2"
+    },
+    {
+      "id": "park-buzzer", "cat": "lights", "sev": "normal",
+      "title": "Buzzer when opening the driver door",
+      "keys": "buzzer beeping door open park lamp",
+      "summary": "The parking lamps are on with the ignition off.",
+      "steps": [
+        { "d": "Turn the lighting stalk to OFF.", "w": "Leaving lamps on drains the 12 V battery." }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.10.2"
+    },
+    {
+      "id": "abs-lamp", "cat": "warn", "sev": "service",
+      "title": "ABS warning stays on",
+      "keys": "abs light warning lamp stays on",
+      "summary": "Normal braking still works, without anti-lock.",
+      "steps": [
+        { "d": "Drive gently with longer following distances.", "w": "" },
+        { "d": "Book a Mahindra authorised dealer visit as soon as possible.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 6.4.3"
+    },
+    {
+      "id": "immo", "cat": "warn", "sev": "service",
+      "title": "Immobiliser lamp flashing or stays on",
+      "keys": "immobiliser immobilizer lamp key symbol flashing",
+      "summary": "The manual treats this as a system malfunction.",
+      "steps": [
+        { "d": "Try your second key.", "w": "" },
+        { "d": "Contact a Mahindra authorised service centre immediately.", "w": "Do not use third-party tools on the immobiliser." }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.2"
+    },
+    {
+      "id": "key-not-inside", "cat": "warn", "sev": "diy",
+      "title": "Message: Key fob not inside",
+      "keys": "key fob not inside message warning",
+      "summary": "The ignition is on but the fob left the car.",
+      "steps": [
+        { "d": "Bring the fob back into the cabin, or switch the ignition off before walking away.", "w": "Leaving the ignition on compromises security." }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 3.1"
+    },
+    {
+      "id": "lv-drain", "cat": "warn", "sev": "service",
+      "title": "12 V battery drain alert in Me4U",
+      "keys": "12v battery drain alert lv battery low voltage",
+      "summary": "The 12 V battery is discharging continuously.",
+      "steps": [
+        { "d": "Check roof and reading lamps are not left on permanently.", "w": "" },
+        { "d": "Avoid running windows and accessories with the ignition off.", "w": "" },
+        { "d": "Switch the car on or charge it. The 12 V battery recharges in ready-to-drive mode and during charging.", "w": "" }
+      ],
+      "esc": "Contact a Mahindra authorised dealer as the app advises.",
+      "ref": "Quick Reference Manual 1.13.1, 11.1"
+    },
+    {
+      "id": "foreign", "cat": "warn", "sev": "diy",
+      "title": "Message: Foreign object detected",
+      "keys": "foreign object detected wireless charger coin",
+      "summary": "Metal is on the wireless charging pad.",
+      "steps": [
+        { "d": "Remove coins, keys or cards between the phone and pad.", "w": "The pad stops to prevent the object overheating." },
+        { "d": "Centre the phone on the pad.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 3.11"
+    },
+    {
+      "id": "ac-weak", "cat": "cabin", "sev": "diy",
+      "title": "AC or airflow feels weak",
+      "keys": "ac not cooling weak airflow climate hvac",
+      "summary": "Airflow paths must be clear.",
+      "steps": [
+        { "d": "Clear leaves and debris from the air intake near the base of the windshield.", "w": "" },
+        { "d": "Make sure nothing blocks the vents inside the cabin.", "w": "" },
+        { "d": "Check the cabin air filter. Replace if dirty.", "w": "" },
+        { "d": "Pre-cool using the fob's remote cooling button or the Me4U app.", "w": "" }
+      ],
+      "esc": "Refrigerant work must be done by Mahindra. Self-servicing voids the warranty.",
+      "ref": "Quick Reference Manual 10; Owner's Manual 11"
+    },
+    {
+      "id": "wireless", "cat": "cabin", "sev": "diy",
+      "title": "Phone won't charge wirelessly",
+      "keys": "wireless charging phone not charging qi",
+      "summary": "The pad supports one Qi phone at a time.",
+      "steps": [
+        { "d": "Confirm your phone supports Qi wireless charging.", "w": "" },
+        { "d": "Align the phone on the pad.", "w": "" },
+        { "d": "Remove any cards or metal between phone and pad.", "w": "" },
+        { "d": "Keep the key fob off the charger.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 3.11"
+    },
+    {
+      "id": "socket-12v", "cat": "cabin", "sev": "diy",
+      "title": "What can I plug into the 12 V socket?",
+      "keys": "12v socket power outlet cigarette lighter accessory rating amps watts inflator compressor fridge fuse blown",
+      "summary": "The socket is rated 10 A maximum, which is 120 W at 12 V. Anything drawing more will blow its fuse.",
+      "inferred": true,
+      "note": "The 10 A rating is owner reported, not printed in the manual text this site holds. The manual confirms the outlet exists, near the seat folding remote lever with a second supply in the boot, but does not state its rating. Check the fuse box legend to confirm it on your own car.",
+      "steps": [
+        { "d": "Work out the accessory's draw. Watts divided by 12 gives amps. Anything at or under 120 W is within the rating.", "w": "Phone chargers, dashcams and most portable fridges at 40 to 60 W are comfortably inside it." },
+        { "d": "Check a tyre inflator's rating before using it. Many draw 10 to 15 A, which sits at or above the limit.", "w": "This is the most common accessory that blows the outlet fuse." },
+        { "d": "Do not run kettles, induction plates or anything above 120 W from this socket.", "w": "" },
+        { "d": "Use one accessory at a time, not a splitter running several.", "w": "The 10 A applies to the circuit, not to each device." },
+        { "d": "If the socket goes dead, check its fuse in the fuse box before assuming a fault.", "w": "A blown fuse is the expected result of an over-rating accessory, not a failure of the car." },
+        { "d": "Avoid leaving accessories plugged in with the ignition off.", "w": "The manual warns that running accessories with the ignition off drains the 12 V battery." }
+      ],
+      "esc": "If the fuse blows again with an accessory you know is under 120 W, or the socket is dead with a good fuse, have it checked by a Mahindra authorised service centre.",
+      "ref": "Owner reported rating; outlet location from Quick Reference Manual 3.11. Confirm against the fuse box legend in the Maintenance chapter."
+    },
+    {
+      "id": "me4u", "cat": "cabin", "sev": "diy",
+      "title": "Me4U app features unavailable",
+      "keys": "me4u app not working connected car login otp subscription",
+      "summary": "Connected features need completed KYC and an active subscription.",
+      "steps": [
+        { "d": "Log in with the mobile number given during KYC.", "w": "" },
+        { "d": "If the OTP doesn't arrive, tap Resend OTP.", "w": "" },
+        { "d": "Check your connected car subscription hasn't expired. Without it, only SOS, RSA, Ask Mahindra and key alerts remain.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 1.13"
+    },
+    {
+      "id": "tyre", "cat": "road", "sev": "diy",
+      "title": "Tyre looks low or has a puncture",
+      "keys": "flat tyre puncture tyre pressure spare",
+      "summary": "Laden pressure is 36 psi front and rear.",
+      "warn": "Never go under a car held only by the jack.",
+      "steps": [
+        { "d": "Stop somewhere safe and switch on the hazards. Place the warning triangle.", "w": "" },
+        { "d": "Do not remove objects stuck in the tread yourself; have a dealer check the tyre.", "w": "" },
+        { "d": "If needed, fit the temporary spare (T135/80 R18) at 60 psi using the marked jack points.", "w": "" },
+        { "d": "Drive gently on the spare to a service centre.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Owner's Manual 1.6, 2.6, 14"
+    },
+    {
+      "id": "tow", "cat": "road", "sev": "stop",
+      "title": "The car needs to be towed",
+      "keys": "towing tow truck recovery",
+      "summary": "Flatbed only.",
+      "warn": "Any other towing method can cause irreversible damage. The car cannot be tow started.",
+      "steps": [
+        { "d": "Call RSA and ask for a flatbed.", "w": "" },
+        { "d": "If the car must be pulled onto the flatbed, screw the tow hook clockwise into the front or rear bumper provision.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Quick Reference Manual 12.2"
+    },
+    {
+      "id": "underbody", "cat": "road", "sev": "service",
+      "title": "Scraped the underside on a bump",
+      "keys": "speed breaker bottomed out underbody hit scraped battery",
+      "summary": "The battery pack sits under the floor.",
+      "steps": [
+        { "d": "Keep speed under 20 km/h over speed breakers and rough roads.", "w": "" },
+        { "d": "If you hit hard, check for leaks, smoke or warnings. If you see any, use the emergency steps.", "w": "" }
+      ],
+      "esc": "Have the battery pack inspected after any hard hit.",
+      "ref": "Owner's Manual 1.4"
+    }
+  ],
+  "signalGroups": [
+    {
+      "id": "port", "name": "Charge port light", "kind": "led",
+      "blurb": "Pick the colour and pattern you see around the CCS2 port.",
+      "items": [
+        { "id": "white-on", "color": "#FFFFFF", "mode": "on", "name": "White, steady", "mean": "Showing battery status.", "act": "No action needed.", "sev": "normal" },
+        { "id": "white-blink", "color": "#FFFFFF", "mode": "blink", "name": "White, blinking", "mean": "The car is verifying the charger connection.", "act": "Wait a few moments. If it never progresses, reconnect the gun.", "sev": "normal" },
+        { "id": "blue-blink", "color": "#3E7BFF", "mode": "blink", "name": "Blue, blinking", "mean": "Charging is scheduled for later.", "act": "Change or cancel the schedule on the screen or in Me4U if you want to charge now.", "sev": "diy", "link": "no-charge" },
+        { "id": "green", "color": "#22C06E", "mode": "chase", "name": "Green, animated", "mean": "Charging is in progress.", "act": "Nothing to do. Unplug to stop.", "sev": "normal" },
+        { "id": "red-on", "color": "#FF3B30", "mode": "on", "name": "Red, steady", "mean": "Battery charge is below 10%.", "act": "Charge as soon as possible. Avoid reaching 0%.", "sev": "service", "link": "low-soc" },
+        { "id": "red-blink", "color": "#FF3B30", "mode": "blink", "name": "Red, blinking", "mean": "Charging error.", "act": "Check the socket, cable and charger. Try another charger.", "sev": "diy", "link": "no-charge" },
+        { "id": "amber-blink", "color": "#FFA41C", "mode": "blink", "name": "Amber, blinking", "mean": "The charging gun is stuck.", "act": "Use the Charge Port Disconnect switch, then the manual release cable.", "sev": "diy", "link": "gun-stuck" }
+      ]
+    },
+    {
+      "id": "fob", "name": "Key fob and hazard signals", "kind": "list",
+      "blurb": "What did the car or the key do after you pressed a button?",
+      "items": [
+        { "id": "s1", "flashes": 1, "name": "Hazards flash once after pressing LOCK", "mean": "All doors are locked and the alarm is armed." },
+        { "id": "s2", "flashes": 5, "name": "Hazards flash 5 times after locking, with chirps or chime", "mean": "A door, the bonnet or tailgate is open, or a fob is left inside. The car did not lock.", "link": "wont-lock" },
+        { "id": "s3", "flashes": 2, "name": "Hazards flash twice after pressing UNLOCK", "mean": "Unlocked and disarmed. No entry was attempted while armed." },
+        { "id": "s4", "flashes": 4, "name": "Hazards flash 4 times with an alarm on UNLOCK", "mean": "Someone attempted entry while the car was armed. Check the car.", "link": "alarm" },
+        { "id": "s5", "flashes": 3, "name": "Hazards flash 3 times at the tailgate", "mean": "The tailgate alone was unlocked with the fob nearby." },
+        { "id": "s6", "name": "Hazards flash and alarm sounds for 30 seconds", "mean": "Search mode, from pressing the tailgate button twice within 2 seconds. Press any fob button to stop." },
+        { "id": "s7", "name": "Red light on the fob blinks", "mean": "A lock, unlock, tailgate or remote cooling press was registered." },
+        { "id": "s8", "name": "Green light on the fob", "mean": "One blink: remote ignition on. Blinking: parking in progress. Steady for 2 seconds: parking completed." },
+        { "id": "s9", "name": "Amber light on the fob blinks", "mean": "Remote parking is paused." },
+        { "id": "s10", "name": "Red light on the fob steady for 2 seconds", "mean": "Remote parking was aborted. Blinking red during parking means the button is not held." },
+        { "id": "s11", "name": "Chirps stopped when locking", "mean": "Chirps are muted. Hold LOCK and UNLOCK together for 3 seconds to toggle." }
+      ]
+    }
+  ],
+  "specs": [
+    { "h": "Tyres", "rows": [["Laden pressure, front and rear", "36 psi"], ["Temporary spare pressure", "60 psi"], ["Tyre size", "245/55 R19 (opt. 245/50 R20)"], ["Spare", "T135/80 R18"]] },
+    { "h": "Battery and motor", "rows": [["Battery options", "59 kWh / 79 kWh"], ["Nominal voltage", "307 V / 409 V"], ["Max power", "170 kW / 210 kW"], ["Max torque", "380 Nm"], ["12 V battery", "55 Ah"]] },
+    { "h": "Charging", "rows": [["Portable charger", "3 kW, 13 A"], ["Wall box", "7.2 kW or 11 kW"], ["On-board charger", "11 kW"], ["Home socket", "230 V, 16 A, earthed"], ["Fast charge 20 to 80%", "About 20 min on 175 kW DC"]] },
+    { "h": "Key fob", "rows": [["Battery", "CR2032, 3 V"], ["Remote range", "About 20 m"], ["Passive lock range", "Within 0.7 m of handle"], ["Max keys per car", "2"]] },
+    { "h": "Power outlets", "rows": [["12 V socket", "10 A max, 120 W (owner reported)"], ["USB-C second row, left", "65 W"], ["USB-C second row, right", "15 W"], ["Wireless pad", "15 W, Qi, one device"]] },
+    { "h": "Load and road", "rows": [["Frunk max load", "60 kg"], ["Speed over breakers", "Under 20 km/h"], ["Towing", "Flatbed only"], ["Fire extinguisher", "Class ABC"]] }
+  ],
+  "service": {
+    "source": "Warranty and Service Information Guide, XEV 9e, Mahindra Electric Automobile Limited, March 2025",
+    "sourceUrl": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw7da250ec/ImportantDocs/Warranty%20&%20Service%20Guide_XEV%209e.pdf",
+    "intervalKm": 10000,
+    "firstServiceKm": 2000,
+    "freeLabourAt": [2000, 10000, 20000],
+    "coverageNote": "Intervals up to 50,000 km are listed here, which covers roughly the first five years at average use. The published chart runs to 200,000 km. Open the guide for the full chart.",
+    "legend": {
+      "I": "Inspect and correct",
+      "R": "Replace",
+      "L": "Lubricate",
+      "CO": "Carry out",
+      "IFREQ": "If required"
+    },
+    "intervals": [2000, 10000, 20000, 30000, 40000, 50000],
+    "operations": [
+      { "n": "eTransmission oil", "c": ["I", "I", "R", "I", "", ""], "note": "Replaced at 20,000 km or 6 years, whichever is earlier." },
+      { "n": "Coolant, level and leak", "c": ["I", "I", "I", "I", "I", "I"], "note": "Replaced at 120,000 km or 6 years, whichever is earlier." },
+      { "n": "Brake fluid, level and leak", "c": ["I", "I", "I", "I", "I", "R"], "note": "Replaced at 50,000 km or 3 years, whichever is earlier." },
+      { "n": "Front and rear brake pads and calipers", "c": ["I", "I", "I", "I", "I", "I"] },
+      { "n": "Ball joint and drive shaft boot, grease leak", "c": ["I", "I", "I", "I", "I", "I"] },
+      { "n": "HV battery bottom surface, checked for damage", "c": ["I", "I", "I", "I", "I", "I"], "note": "Worth asking what they actually saw, given the 20 kmph limit over speed breakers." },
+      { "n": "Diagnostic trouble codes", "c": ["I", "I", "I", "I", "I", "I"] },
+      { "n": "LV (12 V) battery health check", "c": ["I", "I", "I", "I", "I", "I"] },
+      { "n": "All lights, horn, wipers and washer fluid", "c": ["I", "I", "I", "I", "I", "I"] },
+      { "n": "Tyre pressure", "c": ["I", "I", "I", "I", "I", "I"] },
+      { "n": "Pending FOTA update, checked and installed", "c": ["I", "I", "I", "I", "I", "I"], "note": "The car can come back on newer software, so screen behaviour may change." },
+      { "n": "HVAC particle filter (cabin air filter)", "c": ["R", "R", "R", "R", "R", "R"], "chargeable": true },
+      { "n": "Door hinges and check arm", "c": ["L", "L", "L", "L", "L", "L"] },
+      { "n": "Tyre rotation", "c": ["CO", "CO", "CO", "CO", "CO", "CO"], "chargeable": true },
+      { "n": "Wheel balancing", "c": ["", "", "", "", "IFREQ", "IFREQ"], "chargeable": true },
+      { "n": "Wheel alignment", "c": ["", "", "", "", "I", ""], "chargeable": true },
+      { "n": "Radiator, checked for clogging", "c": ["", "", "", "I", "I", "I"], "chargeable": true, "note": "Labour is charged only if the radiator is clogged and has to be removed and cleaned." },
+      { "n": "Service reminder indicator reset", "c": ["CO", "CO", "CO", "CO", "CO", "CO"] },
+      { "n": "Road test", "c": ["CO", "CO", "CO", "CO", "CO", "CO"] }
+    ],
+    "notes": [
+      "The first three services, at 2,000, 10,000 and 20,000 km, are labour-free. Consumables are chargeable at every service.",
+      "Vehicle washing is complimentary.",
+      "To keep warranty cover, all maintenance must be done at Mahindra authorised dealers using the recommended fluids and lubricants."
+    ]
+  },
+  "neverDo": [
+    "Push start or tow start the car.",
+    "Open, remove or touch orange high voltage parts.",
+    "Use a 5 A socket or an extension cord for charging.",
+    "Leave the car at 0% or at 100% for long periods.",
+    "Leave a key fob inside the car, especially with children."
+  ]
+}

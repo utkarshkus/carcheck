@@ -1,0 +1,37 @@
+{
+  "id": "tata-nexon-ev",
+  "make": "Tata",
+  "model": "Nexon EV",
+  "years": "2023 onwards (facelift)",
+  "bodyType": "Compact SUV",
+  "status": "stub",
+  "coverageNote": "No manual content has been entered for this car yet. The page exists so the shape of a new car entry is obvious and so the chat is disabled rather than guessing. Follow tools/INGEST.md to fill it.",
+  "variants": [],
+  "manual": {
+    "title": "Nexon EV Owner's Manual",
+    "publisher": "Tata Motors",
+    "issued": "",
+    "url": "",
+    "note": "Source the manual before entering any content here."
+  },
+  "emergency": {
+    "gatePrompt": "Smoke, a burning smell, fluid under the car, a crash, or visible damage to the underbody or orange cables? Do not troubleshoot. Get everyone out and away.",
+    "title": "After a crash or if something looks wrong",
+    "steps": [
+      "If it is safe, get everyone out and move well away from the car.",
+      "Do not touch orange high voltage cables, a damaged battery pack, or any leaking fluid.",
+      "Tell responders and roadside assistance that this is an electric vehicle.",
+      "Do not charge the car until a Tata technician has inspected it.",
+      "Call Tata Motors 24x7 roadside assistance."
+    ],
+    "contacts": [
+      { "name": "Tata RSA", "detail": "24x7 roadside assistance, number in your owner's handbook" }
+    ],
+    "footnote": "These are general EV precautions, not model-specific instructions from the Nexon EV manual."
+  },
+  "categories": [],
+  "issues": [],
+  "signalGroups": [],
+  "specs": [],
+  "neverDo": []
+}

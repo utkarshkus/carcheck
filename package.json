@@ -1,0 +1,17 @@
+{
+  "name": "ev-manual",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive owner's manual and troubleshooter for electric cars",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "validate": "node tools/validate.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}

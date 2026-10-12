@@ -1,0 +1,125 @@
+{
+  "id": "tata-punch-ev",
+  "make": "Tata",
+  "model": "Punch EV",
+  "years": "2024 onwards",
+  "bodyType": "Micro SUV",
+  "status": "partial",
+  "coverageNote": "Only content that could be sourced from the published manual is here. The full 311-page manual is not machine readable from public mirrors, so the warning lamp table (manual p141), display messages (p150) and the charging chapter (p52 to p69) are still to be entered. Do not assume an absent topic means nothing is wrong.",
+  "variants": ["Smart", "Smart+", "Adventure", "Adventure S", "Empowered", "Empowered+", "Empowered+ LR"],
+  "manual": {
+    "title": "Punch EV Owner's Manual",
+    "publisher": "Tata Motors",
+    "issued": "2024 edition, 311 pages",
+    "url": "https://www.manualslib.com/manual/3511993/Tata-Motors-Punch-Ev-2024.html",
+    "note": "Features vary by variant and by instrument cluster size (4 inch, 7 inch or 10.25 inch)."
+  },
+  "emergency": {
+    "gatePrompt": "Smoke, a burning smell, fluid under the car, a crash, or visible damage to the underbody or orange cables? Do not troubleshoot. Get everyone out and away.",
+    "title": "After a crash or if something looks wrong",
+    "steps": [
+      "If it is safe, get everyone out and move well away from the car.",
+      "Do not touch orange high voltage cables, a damaged battery pack, or any leaking fluid.",
+      "Tell responders and roadside assistance that this is an electric vehicle.",
+      "Do not charge the car until a Tata technician has inspected it.",
+      "Call Tata Motors 24x7 roadside assistance."
+    ],
+    "contacts": [
+      { "name": "Tata RSA", "detail": "24x7 roadside assistance, number in your owner's handbook" },
+      { "name": "ZConnect app", "detail": "Vehicle status and assistance" }
+    ],
+    "footnote": "Placeholder: confirm the SOS and RSA numbers printed in your own handbook and update this file."
+  },
+  "categories": [
+    { "id": "charge", "name": "Charging" },
+    { "id": "warn", "name": "Warnings and messages" },
+    { "id": "road", "name": "Tyres, towing, road" },
+    { "id": "service", "name": "Service and maintenance" }
+  ],
+  "issues": [
+    {
+      "id": "supply-error",
+      "cat": "charge",
+      "sev": "diy",
+      "title": "Charger shows an error on the domestic supply side",
+      "keys": "charging error domestic supply voltage socket rating 15a home charging control box",
+      "summary": "The charger reports a supply fault when the household voltage is outside its acceptable range.",
+      "steps": [
+        { "d": "Check the socket rating. The manual says to use a 15 A socket.", "w": "A lower-rated socket is the most common cause of this error." },
+        { "d": "Plug directly into the wall socket, not through an extension board.", "w": "" },
+        { "d": "Have an electrician confirm the supply voltage and earthing at that socket.", "w": "The error is raised when voltage is out of range." },
+        { "d": "Try a different socket on a different circuit and see whether the error clears.", "w": "" }
+      ],
+      "esc": "If the error appears on a correctly rated and earthed 15 A socket, contact a Tata Motors dealer.",
+      "ref": "Punch EV Owner's Manual, charging control box indicators"
+    },
+    {
+      "id": "control-box",
+      "cat": "charge",
+      "sev": "normal",
+      "title": "What the charging control box light is telling you",
+      "keys": "control box led blinking solid charging light indicator meaning",
+      "summary": "The portable charger's control box shows its state through the indicator light.",
+      "steps": [
+        { "d": "Blinking: the charger is running a self inspection or is in standby.", "w": "Wait for it to move on before assuming a fault." },
+        { "d": "Solid: charging is active.", "w": "" },
+        { "d": "Combined patterns indicate a fault, such as plug temperature, supply error or system malfunction.", "w": "Placeholder: enter the exact pattern for each fault from the charging chapter of your printed manual." }
+      ],
+      "esc": "For any fault pattern that does not clear after reconnecting, contact a Tata Motors dealer.",
+      "ref": "Punch EV Owner's Manual, charging control box indicators"
+    },
+    {
+      "id": "port-cleaning",
+      "cat": "service",
+      "sev": "diy",
+      "title": "Charging port needs cleaning",
+      "keys": "charging port dirty dust cleaning service schedule compressed air",
+      "summary": "The service schedule calls for cleaning the charging socket area every 6 months.",
+      "steps": [
+        { "d": "Clean the charging socket area, using compressed air to clear dust around the charging port housing lid.", "w": "This is a scheduled 6-month item, not a repair." },
+        { "d": "Do not wash the port with water or chemicals.", "w": "" }
+      ],
+      "esc": "If contacts look damaged or corroded, have a Tata dealer inspect before charging again.",
+      "ref": "Punch EV Owner's Manual, service schedule (6-month interval)"
+    },
+    {
+      "id": "flat-tyre",
+      "cat": "road",
+      "sev": "diy",
+      "title": "Flat tyre",
+      "keys": "puncture flat tyre repair kit spare",
+      "summary": "The car ships with a puncture repair kit rather than a full spare on some variants.",
+      "steps": [
+        { "d": "Stop somewhere safe and switch on the hazards.", "w": "" },
+        { "d": "Identify which of the two puncture repair kit types your car carries.", "w": "The manual documents two kit options." },
+        { "d": "Follow the kit's own instructions, then drive gently to a tyre shop.", "w": "Placeholder: enter the kit-specific steps and the recommended tyre pressures from your printed manual." }
+      ],
+      "esc": "Call Tata 24x7 roadside assistance if the tyre cannot be sealed.",
+      "ref": "Punch EV Owner's Manual, flat tyre and puncture repair kit"
+    },
+    {
+      "id": "towing",
+      "cat": "road",
+      "sev": "stop",
+      "title": "The car needs to be towed",
+      "keys": "towing tow truck recovery flatbed",
+      "summary": "Follow the manual's towing chapter. Electric cars generally must not be towed on their driven wheels.",
+      "warn": "Placeholder: confirm the permitted towing method for your variant on manual page 257 before allowing any tow truck to lift the car.",
+      "steps": [
+        { "d": "Call Tata 24x7 roadside assistance and say the car is electric.", "w": "" },
+        { "d": "Check the towing section of the manual, page 257, before the truck arrives.", "w": "" }
+      ],
+      "esc": "",
+      "ref": "Punch EV Owner's Manual p257 (Towing)"
+    }
+  ],
+  "signalGroups": [],
+  "specs": [
+    { "h": "Charging", "rows": [["Home socket rating", "15 A"], ["Battery pack options", "25 kWh and 35 kWh"]] }
+  ],
+  "neverDo": [
+    "Charge from a socket below the rated 15 A.",
+    "Open, remove or touch orange high voltage parts.",
+    "Assume a topic missing from this page means nothing is wrong. This car's content is incomplete."
+  ]
+}

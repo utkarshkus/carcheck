@@ -1,0 +1,32 @@
+{
+  "updated": "2026-09-25",
+  "cars": [
+    {
+      "id": "mahindra-xev-9e",
+      "make": "Mahindra",
+      "model": "XEV 9e",
+      "years": "2025 onwards",
+      "status": "complete",
+      "issueCount": 57,
+      "blurb": "Coupe SUV on the INGLO platform. 59 or 79 kWh."
+    },
+    {
+      "id": "tata-punch-ev",
+      "make": "Tata",
+      "model": "Punch EV",
+      "years": "2024 onwards",
+      "status": "partial",
+      "issueCount": 5,
+      "blurb": "Micro SUV on acti.ev. 25 or 35 kWh."
+    },
+    {
+      "id": "tata-nexon-ev",
+      "make": "Tata",
+      "model": "Nexon EV",
+      "years": "2023 onwards",
+      "status": "stub",
+      "issueCount": 0,
+      "blurb": "Compact SUV. Content not started."
+    }
+  ]
+}

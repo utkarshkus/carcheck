@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EV Manual</title>
+<meta name="description" content="Interactive owner's manual and troubleshooting for your electric car.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/">EV Manual<small id="brandSub"></small></a>
+    <button class="sos-btn" id="openEmergency" hidden>Accident or emergency</button>
+  </header>
+
+  <section class="hero">
+    <h1 id="carTitle">Loading</h1>
+    <p id="carBlurb"></p>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Describe the symptom" aria-label="Search symptoms">
+    </div>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <div id="coverage"></div>
+
+  <section class="gate" aria-label="Safety check" id="gate" hidden>
+    <p><strong>Check this first</strong><span id="gateText"></span></p>
+    <div class="row">
+      <button class="btn danger" id="gateYes">Yes, one of these</button>
+      <button class="btn ghost" id="gateNo">No, continue</button>
+    </div>
+  </section>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-tab="diagnose">Diagnose a problem</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="decoder">Decode lights and signals</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="service" id="serviceTab" hidden>Service schedule</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="specs">Quick specs</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="chat">Ask about your car</button>
+  </nav>
+
+  <main>
+    <section id="diagnose" class="diag" role="tabpanel">
+      <div class="cats" id="cats"></div>
+      <div class="list" id="list"></div>
+      <article class="detail" id="detail" aria-live="polite"></article>
+    </section>
+
+    <section id="decoder" class="decoder" role="tabpanel" hidden></section>
+
+    <section id="service" class="svc" role="tabpanel" hidden></section>
+
+    <section id="specs" class="specs" role="tabpanel" hidden></section>
+
+    <section id="chat" class="chatwrap" role="tabpanel" hidden>
+      <div class="chatbox">
+        <div class="msgs" id="msgs" aria-live="polite"></div>
+        <form class="composer" id="composer">
+          <textarea id="input" rows="1" placeholder="Describe what the car is doing" aria-label="Your question"></textarea>
+          <button class="btn primary" type="submit" id="send">Ask</button>
+        </form>
+      </div>
+      <aside class="side">
+        <h2>How this answers</h2>
+        <p>Answers come only from this car's manual. If the manual does not cover it, you get told that rather than a guess.</p>
+        <div class="starters" id="starters"></div>
+        <ul>
+          <li>It cannot see your car's live data.</li>
+          <li>It will not give high voltage repair instructions.</li>
+          <li>Anything safety critical is sent to a service centre.</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p id="manualRef"></p>
+    <p>Section references point to the manual chapter so you can read the full warnings. A check marked "Not from the manual" is reasoning built on what the manual does say, not documented behaviour. Treat it as a hypothesis to test.</p>
+  </footer>
+</div>
+
+<dialog id="emergency">
+  <div class="dlg">
+    <h2 id="emTitle"></h2>
+    <ol id="emSteps"></ol>
+    <div class="contacts" id="emContacts"></div>
+    <p style="margin:0 0 14px;color:var(--muted);font-size:14px" id="emFoot"></p>
+    <button class="btn primary" id="closeEmergency">Close</button>
+  </div>
+</dialog>
+
+<script src="/assets/car.js"></script>
+</body>
+</html>

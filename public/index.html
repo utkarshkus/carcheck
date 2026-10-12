@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EV Manual</title>
+<meta name="description" content="Interactive owner's manuals and troubleshooting for electric cars.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/">EV Manual<small>owner's manuals that answer back</small></a>
+  </header>
+
+  <section class="hero">
+    <h1>Pick your car. Describe the problem.</h1>
+    <p>Every check here comes from the car's own owner's manual, with the section it came from. You get one of four answers: it is normal, you can fix it, book a service visit, or stop driving.</p>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search make or model" aria-label="Search cars">
+    </div>
+  </section>
+
+  <main class="grid" id="grid"></main>
+
+  <footer>
+    <p>Content is derived from each manufacturer's published owner's manual and cites the section it came from. Features vary by variant. This site does not replace an authorised service centre, and no high voltage component is user serviceable.</p>
+    <p id="count"></p>
+  </footer>
+</div>
+<script src="/assets/home.js"></script>
+</body>
+</html>

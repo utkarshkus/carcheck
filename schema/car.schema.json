@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Car manual data",
+  "description": "One file per car under public/data/cars/<id>.json. Every factual line must be traceable to a manual section via `ref`, or marked inferred:true.",
+  "type": "object",
+  "required": ["id", "make", "model", "status", "manual", "categories", "issues"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "make": { "type": "string" },
+    "model": { "type": "string" },
+    "years": { "type": "string" },
+    "bodyType": { "type": "string" },
+    "status": {
+      "enum": ["complete", "partial", "stub"],
+      "description": "complete = every category populated and checked against the manual. partial = some content sourced. stub = schema only, no verified content."
+    },
+    "coverageNote": {
+      "type": "string",
+      "description": "Shown to users when status is not complete. Say plainly what is missing."
+    },
+    "variants": { "type": "array", "items": { "type": "string" } },
+    "manual": {
+      "type": "object",
+      "required": ["title", "publisher"],
+      "properties": {
+        "title": { "type": "string" },
+        "publisher": { "type": "string" },
+        "issued": { "type": "string" },
+        "url": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "emergency": {
+      "type": "object",
+      "properties": {
+        "gatePrompt": { "type": "string" },
+        "title": { "type": "string" },
+        "steps": { "type": "array", "items": { "type": "string" } },
+        "contacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "detail"],
+            "properties": {
+              "name": { "type": "string" },
+              "detail": { "type": "string" }
+            }
+          }
+        },
+        "footnote": { "type": "string" }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" }
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "cat", "sev", "title", "summary", "steps", "ref"],
+        "properties": {
+          "id": { "type": "string" },
+          "cat": { "type": "string", "description": "Must match a categories[].id" },
+          "sev": {
+            "enum": ["stop", "service", "diy", "normal"],
+            "description": "stop = stop driving and get help. service = book a service visit. diy = the owner can fix it. normal = expected behaviour."
+          },
+          "title": { "type": "string" },
+          "keys": { "type": "string", "description": "Space separated search synonyms" },
+          "summary": { "type": "string" },
+          "warn": { "type": "string", "description": "Safety warning shown before the steps" },
+          "inferred": {
+            "type": "boolean",
+            "description": "true when the guidance is reasoning built on the manual rather than documented behaviour"
+          },
+          "note": { "type": "string", "description": "Required when inferred is true. Explains what the manual does and does not say." },
+          "steps": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["d"],
+              "properties": {
+                "d": { "type": "string", "description": "The instruction" },
+                "w": { "type": "string", "description": "Why, or what to expect" }
+              }
+            }
+          },
+          "esc": { "type": "string", "description": "What to do when the steps do not resolve it" },
+          "ref": { "type": "string", "description": "Manual section reference" }
+        }
+      }
+    },
+    "signalGroups": {
+      "type": "array",
+      "description": "Decodable indicators: charge port LEDs, hazard flash counts, fob lights.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "kind", "items"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "blurb": { "type": "string" },
+          "kind": { "enum": ["led", "list"] },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "name", "mean"],
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" },
+                "color": { "type": "string" },
+                "mode": { "enum": ["on", "blink", "chase"] },
+                "flashes": { "type": "integer" },
+                "mean": { "type": "string" },
+                "act": { "type": "string" },
+                "sev": { "enum": ["stop", "service", "diy", "normal"] },
+                "link": { "type": "string", "description": "An issues[].id to open" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["h", "rows"],
+        "properties": {
+          "h": { "type": "string" },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "service": {
+      "type": "object",
+      "description": "Scheduled maintenance. Usually published in a warranty and service guide rather than the owner's manual, so cite that document in `source`. Omit this object entirely rather than guessing.",
+      "required": ["source", "intervals", "operations", "legend"],
+      "properties": {
+        "source": { "type": "string" },
+        "sourceUrl": { "type": "string" },
+        "intervalKm": { "type": "integer", "description": "Routine interval after the first service" },
+        "firstServiceKm": { "type": "integer" },
+        "freeLabourAt": { "type": "array", "items": { "type": "integer" } },
+        "coverageNote": { "type": "string", "description": "Say so when the listed intervals stop short of the published chart." },
+        "legend": { "type": "object", "additionalProperties": { "type": "string" } },
+        "intervals": { "type": "array", "minItems": 1, "items": { "type": "integer" } },
+        "operations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["n", "c"],
+            "properties": {
+              "n": { "type": "string", "description": "Operation name as printed in the chart" },
+              "c": {
+                "type": "array",
+                "description": "One legend code per interval, in the same order as `intervals`. Empty string means not done at that interval.",
+                "items": { "type": "string" }
+              },
+              "chargeable": { "type": "boolean" },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "neverDo": { "type": "array", "items": { "type": "string" } }
+  }
+}
