@@ -178,7 +178,7 @@ export default async (req) => {
       } else if (res.status === 404) {
         msg = `The model "${MODEL}" is not available to the site's API key. The site owner needs to set OPENAI_MODEL to one the account can use.`;
       }
-      return json({ error: msg, upstreamStatus: res.status }, 502);
+      return json({ error: msg }, 502);
     }
 
     const data = await res.json();
